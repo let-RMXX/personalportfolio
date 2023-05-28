@@ -578,7 +578,9 @@ img {
   display: block;
 }
 
-/*==================== SERVICES ====================*/
+.qualification__button.qualification__active {
+  color: var(--first-color);
+}
 
 
 /* Active Modal */
