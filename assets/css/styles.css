@@ -691,6 +691,15 @@ img {
   padding: .25rem .5rem .5rem 0;
 }
 
+.githubapi__container {
+  row-gap: 3rem;
+}
+
+.github__api {
+  display: flex;
+  margin-bottom: var(--mb-2);
+}
+
 
 
 /*==================== FOOTER ====================*/

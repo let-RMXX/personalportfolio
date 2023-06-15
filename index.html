@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="assets/css/styles.css">
 
     <!--==================== GITHUB DESIGN SCRIPT ====================-->
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <title>Rui Machado</title>
 </head>
@@ -599,6 +600,58 @@
                         </a>
                     </div>
                 </form>
+            </div>
+        </section>
+
+        <section class="githubapi section" id="gitapi">
+            <h2 class="section__title">Github Api Integration</h2>
+            <span class="section__subtitle">Contributions</span>
+            
+            <div class="githubapi__container container grid">
+                <div class="github__api">
+                    <canvas id="contributionsChart"></canvas>
+
+                    <script>
+                        // Fetch GitHub contributions data using the GitHub API
+                        axios.get('https://api.github.com/users/{let-RMXX}/repos')
+                            .then(response => {
+                                const repos = response.data;
+                                const contributions = repos.map(repo => repo.stargazers_count);
+                                createContributionsGraph(contributions);
+                            })
+                            .catch(error => {
+                                console.error('Error fetching contributions:', error);
+                            });
+
+                        // Create the contributions graph using Chart.js
+                        function createContributionsGraph(data) {
+                            const canvas = document.getElementById('contributionsChart');
+                            const ctx = canvas.getContext('2d');
+                            new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: data.map((_, index) => `Repo ${index + 1}`),
+                                    datasets: [{
+                                        label: 'Contributions',
+                                        data: data,
+                                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                        borderColor: 'rgba(75, 192, 192, 1)',
+                                        borderWidth: 1
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    scales: {
+                                        y: {
+                                            beginAtZero: true
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    </script>
+                </div>
             </div>
         </section>
     </main>
