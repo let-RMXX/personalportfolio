@@ -538,72 +538,94 @@
         </section>
 
         <!--==================== GITHUB CONTRIBUTTIONS ====================-->
-       
+        <section class="spotifyapi section" id="spotify">
+            <h2 class="section__title">Music I listen to</h2>
+            <span class="section__subtitle">My recommendation</span>
+
+            <div>
+                <script>
+
+                    const playlistId = '5QbtYrBMqvkZboI0mbQcAK';
+
+                    <iframe
+                        title="Spotify Embed: Recommendation Playlist "
+                        src={`https://open.spotify.com/embed/playlist/5QbtYrBMqvkZboI0mbQcAK?utm_source=generator&theme=0`}
+                        width="100%"
+                        height="100%"
+                        style={{ minHeight: '360px' }}
+                        frameBorder="0"
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy"
+                    />
+
+                </script>
+            </div>
+        </section>
         <!--==================== CONTACT ME ====================-->
-<section class="contact section" id="contact">
-    <h2 class="section__title">Contact Me</h2>
-    <span class="section__subtitle">Get in Touch</span>
+        <section class="contact section" id="contact">
+            <h2 class="section__title">Contact Me</h2>
+            <span class="section__subtitle">Get in Touch</span>
 
-    <div class="contact__container container grid">
-        <div class="contact__information">
-            <i class="uil uil-envelope contact__icon"></i>
+            <div class="contact__container container grid">
+                <div class="contact__information">
+                    <i class="uil uil-envelope contact__icon"></i>
 
-            <div>
-                <h3 class="contact__title">Email me</h3>
-                <span class="contact__subtitle">networkrmxx@gmail.com</span>
-            </div>
-        </div>
-
-        <div class="contact__information">
-            <i class="uil uil-linkedin contact__icon"></i>
-
-            <div>
-                <h3 class="contact__title">Connect</h3>
-                <span class="contact__subtitle">rui-machadoo</span>
-            </div>
-        </div>
-
-        <div class="contact__information">
-            <i class="uil uil-twitter contact__icon"></i>
-
-            <div>
-                <h3 class="contact__title">Message</h3>
-                <span class="contact__subtitle">_letRMXX</span>
-            </div>
-        </div>
-
-        <form action="send_email.php" class="contact__form grid" method="POST">
-            <div class="contact__inputs grid">
-                <div class="contact__content">
-                    <label for="" class="contact__label">Name</label>
-                    <input type="text" class="contact__input" name="name">
+                    <div>
+                        <h3 class="contact__title">Email me</h3>
+                        <span class="contact__subtitle">networkrmxx@gmail.com</span>
+                    </div>
                 </div>
 
-                <div class="contact__content">
-                    <label for="" class="contact__label">Email</label>
-                    <input type="email" class="contact__input" name="email">
+                <div class="contact__information">
+                    <i class="uil uil-linkedin contact__icon"></i>
+
+                    <div>
+                        <h3 class="contact__title">Connect</h3>
+                        <span class="contact__subtitle">rui-machadoo</span>
+                    </div>
                 </div>
-            </div>
-            <div class="contact__content">
-                <label for="" class="contact__label">Project</label>
-                <input type="text" class="contact__input" name="project">
-            </div>
 
-            <div class="contact__content">
-                <label for="" class="contact__label">Message</label>
-                <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
-            </div>
+                <div class="contact__information">
+                    <i class="uil uil-twitter contact__icon"></i>
 
-            <div>
-                <a href="send_email.php" class="button button--flex">
-                    Send Message
-                    <i class="uil uil-message button__icon"></i>
-                </a>
+                    <div>
+                        <h3 class="contact__title">Message</h3>
+                        <span class="contact__subtitle">_letRMXX</span>
+                    </div>
+                </div>
+
+                <form action="send_email.php" class="contact__form grid" method="POST">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Name</label>
+                            <input type="text" class="contact__input" name="name">
+                        </div>
+
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Email</label>
+                            <input type="email" class="contact__input" name="email">
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Project</label>
+                        <input type="text" class="contact__input" name="project">
+                    </div>
+
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Message</label>
+                        <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
+                    </div>
+
+                    <div>
+                        <a href="send_email.php" class="button button--flex">
+                            Send Message
+                            <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </form>
             </div>
-        </form>
-    </div>
-</section>
-</main>
+        </section>
+    </main>
 
 </body>
 
