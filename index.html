@@ -14,6 +14,9 @@
     <!--==================== CSS CONNECTION ====================-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
+    <!--==================== GITHUB DESIGN SCRIPT ====================-->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
     <title>Rui Machado</title>
 </head>
 
@@ -534,122 +537,130 @@
             </div>
         </section>
 
+        <!--==================== GITHUB CONTRIBUTTIONS ====================-->
+       
         <!--==================== CONTACT ME ====================-->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <span class="section__subtitle">Get in Touch</span>
+<section class="contact section" id="contact">
+    <h2 class="section__title">Contact Me</h2>
+    <span class="section__subtitle">Get in Touch</span>
 
-            <div class="contact__container container grid">
-                <div class="contact__information">
-                    <i class="uil uil-envelope contact__icon"></i>
+    <div class="contact__container container grid">
+        <div class="contact__information">
+            <i class="uil uil-envelope contact__icon"></i>
 
-                    <div>
-                        <h3 class="contact__title">Email me</h3>
-                        <span class="contact__subtitle">networkrmxx@gmail.com</span>
-                    </div>
-                </div>
-
-                <div class="contact__information">
-                    <i class="uil uil-linkedin contact__icon"></i>
-
-                    <div>
-                        <h3 class="contact__title">Connect</h3>
-                        <span class="contact__subtitle">rui-machadoo</span>
-                    </div>
-                </div>
-
-                <div class="contact__information">
-                    <i class="uil uil-twitter contact__icon"></i>
-
-                    <div>
-                        <h3 class="contact__title">Message</h3>
-                        <span class="contact__subtitle">_letRMXX</span>
-                    </div>
-                </div>
-
-                <form action="" class="contact__form grid">
-                    <div class="contact__inputs grid">
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
-                        </div>
-
-                        <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
-                        </div>
-                    </div>
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Project</label>
-                        <input type="text" class="contact__input">
-                    </div>
-
-                    <div class="contact__content">
-                        <label for="" class="contact__label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
-                    </div>
-
-                    <div>
-                        <a href="#" class="button button--flex">
-                            Send Message
-                            <i class="uil uil-message button__icon"></i>
-                        </a>
-                    </div>
-                </form>
+            <div>
+                <h3 class="contact__title">Email me</h3>
+                <span class="contact__subtitle">networkrmxx@gmail.com</span>
             </div>
-        </section>
-    </main>
-
-    <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__bg">
-            <div class="footer__container container grid">
-                <div>
-                    <h1 class="footer__title">Rui Machado</h1>
-                    <span class="footer__subtitle">Developer</span>
-                </div>
-
-                <ul class="footer__link">
-                    <li>
-                        <a href="#qualifications" class="footer__link">Qualifications</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio" class="footer__link">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#contact" class="footer__link">Contactme</a>
-                    </li>
-                </ul>
-
-                <div class="footer__socials">
-                    <a href="https://twitter.com/_letRMXX" target="_blank" class="footer__social">
-                        <i class="uil uil-twitter-alt"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/rui-machadoo/" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
-                    </a>
-
-                    <a href="https://github.com/let-RMXX" target="_blank" class="footer__social">
-                        <i class="uil uil-github-alt"></i>
-                    </a>
-                </div>
-            </div>
-
-            <p class="footer__copy">&#169; Rui Machado.</p>
         </div>
-    </footer>
 
-    <!--==================== SCROLL TOP ====================-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="uil uil-arrow-circle-up scrollup__icon"></i>
-    </a>
+        <div class="contact__information">
+            <i class="uil uil-linkedin contact__icon"></i>
 
-    <!--==================== SWIPER JS ====================-->
-    <script src="assets/js/swiper-bundle.min.js"></script>
+            <div>
+                <h3 class="contact__title">Connect</h3>
+                <span class="contact__subtitle">rui-machadoo</span>
+            </div>
+        </div>
 
-    <!--==================== JAVASCRIPT CONNECTION ====================-->
-    <script src="assets/js/main.js"></script>
+        <div class="contact__information">
+            <i class="uil uil-twitter contact__icon"></i>
+
+            <div>
+                <h3 class="contact__title">Message</h3>
+                <span class="contact__subtitle">_letRMXX</span>
+            </div>
+        </div>
+
+        <form action="send_email.php" class="contact__form grid" method="POST">
+            <div class="contact__inputs grid">
+                <div class="contact__content">
+                    <label for="" class="contact__label">Name</label>
+                    <input type="text" class="contact__input" name="name">
+                </div>
+
+                <div class="contact__content">
+                    <label for="" class="contact__label">Email</label>
+                    <input type="email" class="contact__input" name="email">
+                </div>
+            </div>
+            <div class="contact__content">
+                <label for="" class="contact__label">Project</label>
+                <input type="text" class="contact__input" name="project">
+            </div>
+
+            <div class="contact__content">
+                <label for="" class="contact__label">Message</label>
+                <textarea name="message" id="" cols="0" rows="7" class="contact__input"></textarea>
+            </div>
+
+            <div>
+                <a href="send_email.php" class="button button--flex">
+                    Send Message
+                    <i class="uil uil-message button__icon"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+</section>
+</main>
+
+</body>
+
+</html>
+
+</section>
+
+<!--==================== FOOTER ====================-->
+<footer class="footer">
+    <div class="footer__bg">
+        <div class="footer__container container grid">
+            <div>
+                <h1 class="footer__title">Rui Machado</h1>
+                <span class="footer__subtitle">Developer</span>
+            </div>
+
+            <ul class="footer__link">
+                <li>
+                    <a href="#qualifications" class="footer__link">Qualifications</a>
+                </li>
+                <li>
+                    <a href="#portfolio" class="footer__link">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#contact" class="footer__link">Contactme</a>
+                </li>
+            </ul>
+
+            <div class="footer__socials">
+                <a href="https://twitter.com/_letRMXX" target="_blank" class="footer__social">
+                    <i class="uil uil-twitter-alt"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/rui-machadoo/" target="_blank" class="footer__social">
+                    <i class="uil uil-linkedin-alt"></i>
+                </a>
+
+                <a href="https://github.com/let-RMXX" target="_blank" class="footer__social">
+                    <i class="uil uil-github-alt"></i>
+                </a>
+            </div>
+        </div>
+
+        <p class="footer__copy">&#169; Rui Machado.</p>
+    </div>
+</footer>
+
+<!--==================== SCROLL TOP ====================-->
+<a href="#" class="scrollup" id="scroll-up">
+    <i class="uil uil-arrow-circle-up scrollup__icon"></i>
+</a>
+
+<!--==================== SWIPER JS ====================-->
+<script src="assets/js/swiper-bundle.min.js"></script>
+
+<!--==================== JAVASCRIPT CONNECTION ====================-->
+<script src="assets/js/main.js"></script>
 </body>
 
 </html>
