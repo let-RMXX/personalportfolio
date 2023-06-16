@@ -291,6 +291,10 @@ img {
   width: 250px;
 }
 
+#mask0 {
+  mask-type: alpha;
+}
+
 .home__data {
   grid-column: 1/3;
 }
