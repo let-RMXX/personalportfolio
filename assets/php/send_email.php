@@ -19,4 +19,3 @@ if (mail($to, $subject, $body, $headers)) {
   // Error sending email
   echo 'Error sending email.';
 }
-?>
