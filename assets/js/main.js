@@ -123,5 +123,10 @@ window.addEventListener('scroll', scrollUp)
 
 /*==================== DARK LIGHT THEME ====================*/
 
-/*==================== SPOTIFY API ====================*/
-
+/*==================== CONTACT FORM ====================*/
+document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('submitForm').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        document.getElementById('contactForm').submit(); // Submit the form
+    });
+});

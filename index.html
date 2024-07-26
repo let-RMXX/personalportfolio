@@ -148,7 +148,7 @@
             <h2 class="section__title">About Me</h2>
             <span class="section__subtitle"></span>
 
-            <div class="about__container container grid">
+            <div class="about__container container">
                 <!--<img src="" alt="" class="about__img">-->
 
                 <div class="about__data">
@@ -195,7 +195,7 @@
             <h2 class="section__title">Skills</h2>
             <span class="section__subtitle">My Technical Level</span>
 
-            <div class="skills__container container grid">
+            <div class="skills__container container">
                 <div>
                     <!--==================== SKILL 1 ====================-->
                     <div class="skills__content skills__dropdown">
@@ -519,10 +519,12 @@
                                 sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                 Mus mauris vitae ultricies leo integer malesuada nunc.
                                 Posuere ac ut consequat semper viverra nam libero justo.</p>
-                            <a href="#" class="button button--flex button--small portfolio__button">
-                                Source Code
-                                <i class="uil uil-github button__icon"></i>
-                            </a>
+                            <div class="portfolio__button">
+                                <a href="#" class="button button--flex">
+                                    Source Code
+                                    <i class="uil uil-github button__icon"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -607,7 +609,7 @@
                     </div>
                 </div>
 
-                <form action="./assets/php/send_email.php" class="contact__form grid" method="POST">
+                <form id="contactForm" action="https://formsubmit.co/networkrmxx@gmail.com" class="contact__form grid" method="POST">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label class="contact__label">Name</label>
@@ -629,8 +631,8 @@
                         <textarea name="message" rows="7" class="contact__input"></textarea>
                     </div>
 
-                    <div>
-                        <a href="send_email.php" class="button button--flex">
+                    <div class="contact__button">
+                        <a id="submitForm" class="button button--flex">
                             Send Message
                             <i class="uil uil-message button__icon"></i>
                         </a>

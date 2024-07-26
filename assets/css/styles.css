@@ -611,6 +611,11 @@ img {
   margin-bottom: var(--mb-0-75);
 }
 
+.portfolio__button {
+  justify-content: center;
+  display: flex;
+}
+
 .portfolio__button:hover .button__icon {
   transform: translateX(.25rem);
 }
@@ -649,6 +654,9 @@ img {
 
 /*==================== CONTACT ME ====================*/
 .contact__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   row-gap: 3rem;
 }
 
@@ -695,16 +703,10 @@ img {
   padding: .25rem .5rem .5rem 0;
 }
 
-.githubapi__container {
-  row-gap: 3rem;
-}
-
-.github__api {
+.contact__button {
+  justify-content: center;
   display: flex;
-  margin-bottom: var(--mb-2);
 }
-
-
 
 /*==================== FOOTER ====================*/
 .footer {
@@ -976,7 +978,7 @@ border-radius: .5rem;
   }
 
   .about__buttons {
-    justify-content: initial;
+    justify-content: center;
   }
 
   .qualification__tabs {
@@ -1034,6 +1036,10 @@ border-radius: .5rem;
 
   .project__data {
     padding-top: .8rem;
+  }
+
+  .contact__button {
+    justify-content: center;
   }
 
   .footer__container {
@@ -1099,7 +1105,7 @@ border-radius: .5rem;
   }
 
   .contact__form {
-    width: 460px;
+    width: 100%;
   }
 
   .contact__inputs {
